@@ -1,10 +1,17 @@
 #! /bin/bash
 
+# You must configure this environmental variable in your .profile or .bash_profile or wherever
+# ... because the default CWD for cron jobs is your home area and the git commands will not work
+cd $SCRIPT_WORKING_DIRECTORY
+
+echo $SCRIPT_WORKING_DIRECTORY
+
 # Write the date + time of the commit to the log file
 date >> log.txt
 
 # Commit and push to remote
-	# Bash does not like quotes in commands, so we save command as a variable and evaluate instead of just executing
+	# Bash does not like quotes in commands, 
+	# so we save commands as a variables and evaluate instead of just executing
 COMMAND1='git commit -a -m "Todays commit"'
 COMMAND2='git push'
 eval $COMMAND1
