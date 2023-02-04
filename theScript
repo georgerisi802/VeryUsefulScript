@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# Write the date + time of the commit to the log file
+date >> log.txt
+
+# Commit and push to remote
+	# Bash does not like quotes in commands, so we save command as a variable and evaluate instead of simply executing
+COMMAND1=(git commit -a -m "Today's commit")
+eval $COMMAND1
+
