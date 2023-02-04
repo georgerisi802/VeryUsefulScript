@@ -6,6 +6,5 @@ date >> log.txt
 # Commit and push to remote
 	# Bash does not like quotes in commands, so we save command as a variable and evaluate instead of just executing
 COMMAND1='git commit -a -m "Todays commit"'
-COMMAND2='git status'
 eval $COMMAND1
 
