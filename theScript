@@ -2,9 +2,9 @@
 
 # You must configure this environmental variable in your .profile or .bash_profile or wherever
 # ... because the default CWD for cron jobs is your home area and the git commands will not work
-cd $SCRIPT_WORKING_DIRECTORY
+#cd $SCRIPT_WORKING_DIRECTORY
 
-echo $SCRIPT_WORKING_DIRECTORY
+pwd
 
 # Write the date + time of the commit to the log file
 date >> log.txt
